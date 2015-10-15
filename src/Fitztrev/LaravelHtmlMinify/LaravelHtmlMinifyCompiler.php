@@ -72,6 +72,7 @@ class LaravelHtmlMinifyCompiler extends BladeCompiler
                 "/\n/"                      => '',
                 "/\t/"                      => ' ',
                 "/ +/"                      => ' ',
+                '/\[(google[\w:\s]+)\]/'    => '<!--$1-->'
             );
 
             return preg_replace(
